@@ -1,0 +1,13 @@
+{
+	"tabWidth": 4,
+	"useTabs": false,
+	"proseWrap": "always",
+	"embeddedLanguageFormatting": "auto",
+	"editor.formatOnSave": true,
+	"singleQuote": true,
+	"requireConfig": false,
+	"trailingComma": "none",
+	"bracketSpacing": true,
+	"jsxBracketSameLine": false,
+	"semi": true
+}
