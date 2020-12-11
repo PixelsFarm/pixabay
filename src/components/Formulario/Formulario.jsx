@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Formulario = ({ guardarResultado }) => {
 
-    const [ busqueda, guardarBusqueda ] = useState()
+    const [ busqueda, guardarBusqueda ] = useState('')
     const [ error, guardarError ] = useState(false)
 
     const onSubmit = e => {
@@ -12,11 +12,11 @@ const Formulario = ({ guardarResultado }) => {
         //console.log(busqueda)
 
         //* validar
-        if (busqueda === undefined) {
+        if (busqueda.trim() === '') {
             guardarError(true)
             return
         }
-
+        
         //* ok
         guardarError(false)
         guardarResultado(busqueda)
@@ -32,7 +32,7 @@ const Formulario = ({ guardarResultado }) => {
                         type="text"
                         className="form-control form-control-lg" 
                         placeholder="Busca una imagen"
-                        onChange={ e => guardarBusqueda(e.target.value) }
+                        onChange={e => guardarBusqueda(e.target.value)}
                         value={busqueda}
                     />
                 </div>
